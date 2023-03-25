@@ -1,8 +1,6 @@
 import "./Dictionary.css";
 
-// Add images from unsplash!!
-
-function Dictionary({ word }) {
+function Dictionary({ word, images }) {
   if (!word.length) {
     return <div>Please enter a word to search</div>;
   }
@@ -12,6 +10,19 @@ function Dictionary({ word }) {
   return (
     <div>
       <h1>{meaning.word}</h1>
+      <ul>
+        {images.slice(0, 9).map((image) => {
+          return (
+            <li key={image.id}>
+              <img
+                src={image.urls.small}
+                alt={image.alt_description}
+                className="images"
+              />
+            </li>
+          );
+        })}
+      </ul>
       <p>Phonetic: {meaning.phonetic}</p>
       <audio controls>
         <source src={meaning.phonetics[1].audio} type="audio/mpeg" />

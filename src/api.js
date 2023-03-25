@@ -21,6 +21,7 @@ const searchImages = async (term) => {
       query: term,
     },
   });
+
   return response.data.results;
 };
 

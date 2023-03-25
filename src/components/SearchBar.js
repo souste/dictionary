@@ -1,12 +1,13 @@
 import "./SearchBar.css";
 import { useState } from "react";
 
-function SearchBar({ onSubmit }) {
+function SearchBar({ onWordSubmit, onImageSubmit }) {
   const [term, setTerm] = useState("");
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    onSubmit(term);
+    onWordSubmit(term);
+    onImageSubmit(term);
   };
 
   const handleChange = (event) => {
@@ -14,7 +15,8 @@ function SearchBar({ onSubmit }) {
   };
 
   return (
-    <div>
+    <div className="search-bar-border">
+      <h1>Dictionary</h1>
       <form onSubmit={handleFormSubmit}>
         <input value={term} onChange={handleChange} />
       </form>

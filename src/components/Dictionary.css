@@ -1,0 +1,19 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.images {
+  margin-right: 10px;
+  height: 200px;
+  width: 200px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 50px;
+}
