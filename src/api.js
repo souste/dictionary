@@ -8,7 +8,7 @@ const searchWords = async (term) => {
 
     return response.data;
   } catch (error) {
-    console.log(error);
+    throw new Error("Word not found");
   }
 };
 

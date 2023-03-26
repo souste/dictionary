@@ -1,10 +1,45 @@
-.nav {
+.search-bar-border {
+  background-color: #c96406;
   border: black solid 2px;
-  font-size: 50px;
+  display: flex;
+  align-items: center;
 }
 
-.search-bar-border {
-  background-color: red;
-  border: black solid 2px;
-  height: 100px;
+.logo {
+  margin-right: 1rem;
+  width: 300px;
+  height: 200px;
+}
+
+.search.bar {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+  border-radius: 0.875rem;
+}
+
+.main-title {
+  color: #f2f2f2;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  font-size: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+  .search-bar {
+    margin-top: 1rem;
+  }
+  .search-bar input {
+    width: 100%;
+  }
 }

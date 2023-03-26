@@ -1,19 +1,103 @@
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .images {
   margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
   height: 200px;
   width: 200px;
-}
-
-ul {
-  list-style-type: none;
+  max-width: 100%;
 }
 
 h1 {
   font-size: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.phonetics {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.definition {
+  text-align: left;
+  margin-left: 0;
+  padding-bottom: 20px;
+}
+
+ul li {
+  text-align: left;
+}
+
+.dictionary-word {
+  padding-top: 0;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.dictionary-box {
+  margin-left: 400px;
+  margin-right: 400px;
+  border-radius: 0.875rem;
+  margin-top: 20px;
+  padding: 10px, 10px, 10px, 10px;
+  background-color: #f7b955;
+}
+
+.first-message {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .dictionary-box {
+    margin: 20px 10px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .images {
+    height: 100%;
+    width: 100%;
+  }
+  ul {
+    flex-wrap: wrap;
+  }
+  ul li {
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+  }
+  .phonetics {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .images {
+    height: 120px;
+    width: 120px;
+    margin: 5px;
+  }
+  .definition {
+    font-size: 16px;
+    margin: 5px 0 10px;
+    padding-bottom: 0;
+  }
+  ul li:not(:first-child) {
+    display: none;
+  }
+  ol {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
 }
